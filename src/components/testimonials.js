@@ -3,11 +3,11 @@ import styled from "styled-components"
 import Slider from "react-slick"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
-import { device, primary } from "../styles/globalstyles"
+import { device, primary, secondary } from "../styles/globalstyles"
 
 export const Testimonial = styled.section`
   display: flex;
-
+  align-items: center;
   height: 100vh;
   background: ${primary};
   .testimonial-title {
@@ -23,7 +23,9 @@ export const Testimonial = styled.section`
     flex-direction: column;
     justify-content: space-evenly;
     .testimonial-title {
-      text-align: center;
+      span {
+        color: ${secondary};
+      }
     }
   }
   @media ${device.laptop} {
@@ -31,6 +33,10 @@ export const Testimonial = styled.section`
     justify-content: space-between;
     .testimonial-title {
       text-align: start;
+
+      h2 {
+        font-size: 2.2rem;
+      }
     }
   }
 `
@@ -110,7 +116,9 @@ const Testimonials = () => {
         />
       </Helmet>
       <div className="testimonial-title">
-        <h2>Client Says</h2>
+        <h2>
+          Client <span>Says</span>
+        </h2>
         <p>Testimonials</p>
       </div>
       <>

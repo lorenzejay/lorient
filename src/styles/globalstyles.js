@@ -18,4 +18,5 @@ export const device = {
   desktop: `(min-width: ${size.desktop})`,
 }
 
-export const primary = "pink"
+export const primary = "#ffd5c8"
+export const secondary = "#ffa488"

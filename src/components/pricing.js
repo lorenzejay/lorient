@@ -3,9 +3,13 @@ import styled from "styled-components"
 import { device } from "../styles/globalstyles"
 
 export const PricingSection = styled.section`
+  margin-bottom: 5vh;
   @media ${device.mobileS} {
     .pricing-title {
       padding: 5%;
+      h2 {
+        font-weight: 400;
+      }
     }
     .pricing-cards-container {
       display: flex;

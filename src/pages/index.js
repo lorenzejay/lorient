@@ -9,6 +9,7 @@ import { device } from "../styles/globalstyles"
 import Welcome from "../components/welcome"
 import Testimonials from "../components/testimonials"
 import Pricing from "../components/pricing"
+import Button from "../components/button"
 
 export const HomePageContentPadding = styled.section`
   @media ${device.laptop} {
@@ -31,11 +32,23 @@ const IndexPage = () => {
       }
     }
   `)
-  console.log(data.facial.childImageSharp.fluid)
+
   return (
     <Layout>
       <SEO title="Lorient | Skin Care Specialist" />
-      <Hero image={data.facial.childImageSharp.fluid} />
+      <Hero
+        image={data.facial.childImageSharp.fluid}
+        bigText="Lorient"
+        smallText="Become revitalized, make heads turn, and look younger."
+        buttonLink="/about"
+        buttonText="Learn More"
+      />
+      {/* <h1>Become Lorient</h1>
+        <h4>Feel Revitalize, make heads turn back, and live younger.</h4>
+        <Button color={primary}>
+          <Link to="/">Learn More</Link>
+        </Button>
+      </Hero> */}
 
       <Welcome />
       <Features />

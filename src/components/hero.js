@@ -6,42 +6,73 @@ import { Link } from "gatsby"
 import Button from "./button"
 
 export const HeroContainer = styled(BackgroundImage)`
-  background-color: rgb(211, 211, 211);
-  background-blend-mode: multiply;
+  width: 100%;
+  opacity: 1 !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
-
+  background-position: center;
   @media ${device.mobileS} {
     height: 55vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    object-fit: cover;
+    background-size: contain;
+    text-align: center;
+
     padding: 5%;
-    h2,
-    h1,
-    a {
+    h4 {
       color: white;
       font-weight: 300;
       margin-bottom: 15px;
+      text-align: center;
     }
-    h2 {
+    a {
+      color: #333;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    h1 {
+      font-size: 1.7rem;
+      margin: ${props =>
+        props.forComponent === true ? "10vh 0" : "15vh 0 2vh"};
+      color: white;
+      font-weight: 700;
       text-transform: uppercase;
     }
   }
   @media ${device.laptop} {
-    height: 100vh;
+    height: 65vh;
+    h1 {
+      font-size: 3rem;
+    }
+    font-size: 2.2rem;
   }
 `
 
-const Hero = ({ image }) => {
+const Hero = ({
+  image,
+  bigText,
+  smallText,
+  buttonText,
+  buttonLink,
+  forComponent,
+}) => {
   return (
-    <HeroContainer fluid={image} backgroundColor={`#040e18`}>
-      <h2>Become Lorient</h2>
-      <h1>Feel Revitalize, make heads turn back, and live younger.</h1>
-      <Button color={primary}>
-        <Link to="/">Learn More</Link>
-      </Button>
+    <HeroContainer
+      fluid={image}
+      backgroundColor={`#040e18`}
+      forComponent={forComponent}
+    >
+      <h1>{bigText}</h1>
+      <h4>{smallText}</h4>
+      {buttonText && (
+        <Button color={primary}>
+          <Link to={buttonLink}>{buttonText}</Link>
+        </Button>
+      )}
     </HeroContainer>
   )
 }

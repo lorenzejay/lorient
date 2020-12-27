@@ -10,12 +10,12 @@ export const FeaturedGrid = styled.section`
     align-self: flex-start;
     padding: 0 5%;
     margin: 5vh 0;
-    h1,
+    h2,
     p {
       font-weight: 400;
       text-align: left;
     }
-    h1 {
+    h2 {
       color: ${primary};
       text-transform: uppercase;
       letter-spacing: 5px;
@@ -36,7 +36,7 @@ export const FeaturedGrid = styled.section`
     align-items: center;
     justify-content: space-around;
 
-    h1 {
+    h2 {
       margin-top: 25vh;
       font-size: 2.2rem;
     }
@@ -66,11 +66,19 @@ export const FeaturedCard = styled.div`
     width: 50%;
   }
   &:hover {
-    background-color: #f9a392;
+    background-color: #ffd5c8;
+  }
+  @media ${device.mobileS} {
+    background-color: ${props => (props.id % 2 === 0 ? "#f9a392" : "#231F22")};
+
+    h3,
+    p {
+      color: ${props => (props.id % 2 === 0 ? "#333" : "whitesmoke")};
+    }
   }
   @media ${device.laptop} {
     background-color: ${props =>
-      props.contrast == true ? "#FFD5C8" : "black"};
+      props.contrast == true ? "#f9a392" : "#231F22"} !important;
     width: 400px;
     height: 330px;
     padding: 0 2%;
@@ -92,14 +100,14 @@ const Features = () => {
   return (
     <FeaturedGrid>
       <div className="featured-head">
-        <h1>
+        <h2>
           What we <span>Do</span>
-        </h1>
+        </h2>
         <p>The Best Services</p>
       </div>
 
       <div className="featured-card-container">
-        <FeaturedCard contrast={false}>
+        <FeaturedCard contrast={false} id={1}>
           <h3>Facial</h3>
           <hr />
           <p>
@@ -107,17 +115,17 @@ const Features = () => {
             atheletes.
           </p>
         </FeaturedCard>
-        <FeaturedCard contrast={true}>
+        <FeaturedCard contrast={true} id={2}>
           <h3>Back Treatment</h3>
           <hr />
           <p>Lorem djassd djaskdja eqwio dj jeq dsj qejwq dasjkd dhsaj</p>
         </FeaturedCard>
-        <FeaturedCard contrast={true}>
+        <FeaturedCard contrast={true} id={3}>
           <h3>Hand Treatment</h3>
           <hr />
           <p>Lorem djassd djaskdja eqwio dj jeq dsj qejwq dasjkd dhsaj</p>
         </FeaturedCard>
-        <FeaturedCard contrast={false}>
+        <FeaturedCard contrast={false} id={4}>
           <h3>Eyebrows</h3>
           <hr />
           <p>Lorem djassd djaskdja eqwio dj jeq dsj qejwq dasjkd dhsaj</p>
