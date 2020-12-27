@@ -1,22 +1,47 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Hero from "../components/hero"
+import Features from "../components/features"
+import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+import { device } from "../styles/globalstyles"
+import Welcome from "../components/welcome"
+import Testimonials from "../components/testimonials"
+import Pricing from "../components/pricing"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+export const HomePageContentPadding = styled.section`
+  @media ${device.laptop} {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+`
 
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      facial: file(relativePath: { eq: "facial6.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+  console.log(data.facial.childImageSharp.fluid)
+  return (
+    <Layout>
+      <SEO title="Lorient | Skin Care Specialist" />
+      <Hero image={data.facial.childImageSharp.fluid} />
+
+      <Welcome />
+      <Features />
+      <Pricing />
+      <Testimonials />
+    </Layout>
+  )
+}
 export default IndexPage
