@@ -23,7 +23,7 @@ export const HomePageContentPadding = styled.section`
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      facial: file(relativePath: { eq: "facial6.jpg" }) {
+      facial: file(relativePath: { eq: "facial5.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -35,10 +35,10 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Lorient | Skin Care Specialist" />
+      <SEO title="L'ORIENT | Skin Care Specialist" />
       <Hero
         image={data.facial.childImageSharp.fluid}
-        bigText="Lorient"
+        bigText="L'orient"
         smallText="Keeping your skin healthy, youthful and glowing."
         buttonLink="/about"
         buttonText="Learn More"

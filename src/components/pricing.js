@@ -9,6 +9,7 @@ export const PricingSection = styled.section`
       padding: 5%;
       h2 {
         font-weight: 400;
+        text-transform: uppercase;
       }
     }
     .pricing-cards-container {
@@ -74,7 +75,7 @@ const Pricing = () => {
   return (
     <PricingSection>
       <div className="pricing-title">
-        <h2>Prices</h2>
+        <h2>Our Packages</h2>
       </div>
       <div className="pricing-cards-container">
         <PricingCards>
@@ -86,7 +87,9 @@ const Pricing = () => {
             <ul>
               <li>Double Cleaning Wash</li>
               <li>Basic Extraction</li>
-              <li>Basic Masic</li>
+              <li>Basic Mask Peel</li>
+              <li>Light Treatment</li>
+              <li></li>
             </ul>
           </div>
         </PricingCards>
@@ -97,6 +100,8 @@ const Pricing = () => {
           </div>
           <div className="card-services">
             <ul>
+              <li>Customized Facial</li>
+              <li>Microdermabrasion</li>
               <li>Glowing Mask</li>
               <li>Exfoliation</li>
               <li>Soothing Protective Balm</li>
@@ -110,6 +115,8 @@ const Pricing = () => {
           </div>
           <div className="card-services">
             <ul>
+              <li>Anti-Aging Facial</li>
+              <li>Chemical Peel</li>
               <li>Gua-sha Massage</li>
               <li>Facial Massage</li>
               <li>Signature Cooling Ice Globe</li>

@@ -2,9 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { device } from "../styles/globalstyles"
 import { graphql, useStaticQuery } from "gatsby"
-import Button from "./button"
-import Image from "./image"
-import IMG from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 
 export const WelcomeContainer = styled.section`
@@ -130,19 +127,6 @@ const Welcome = () => {
           facial for your specific needs and leave your skin glowing and looking
           its best.
         </p>
-        {/* <ol>
-          <li>Double-Cleansing</li>
-          <li>Exfoliation</li>
-          <li>Extractions</li>
-          <li>Cooling Mask Treatment</li>
-        </ol>
-        <p>Add ons also include:</p>
-        <ol>
-          <li>Facial Massage</li>
-          <li>Gua-Sha Massage</li>
-          <li>Signature Cooling Ice Globes</li>
-        </ol> */}
-        <Button color="#FFB1A4">Read More</Button>
       </div>
     </WelcomeContainer>
   )

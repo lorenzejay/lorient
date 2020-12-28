@@ -20,9 +20,12 @@ export const AboutWrapper = styled.section`
     justify-content: space-space-between;
     h2 {
       font-size: 1.6rem;
+      margin: 3.5vh 0;
     }
     p {
-      line-height: 1.7rem;
+      line-height: 2rem;
+      font-size: 1.2rem;
+      margin: 15px;
     }
     ul {
       list-style: none;
@@ -30,9 +33,10 @@ export const AboutWrapper = styled.section`
       float: left;
       margin: 5vh 0;
       li {
-        line-height: 2rem;
+        line-height: 2.2rem;
+        font-size: 1.3rem;
         &::before {
-          content: "•";
+          content: "•   ";
           color: red;
           font-weight: bold;
           align-self: flex-start;
@@ -68,23 +72,30 @@ const About = () => {
           <span style={{ color: secondary }}>Who</span> we are
         </h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
+          L'ORIENT SKINCARE specializes in a facial skin care treament that
+          involves customized treatment meant to target your specific concerns
+          and issues.
         </p>
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque. Consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore. Lorem Ipsum proin gravida nibh vel velit
-          auctor aliquet:
+          We tailor every facial to keep yopur skin glowing and look its best.
         </p>
+        <p>
+          Enhance each guest by bringing out your inner beauty and confidence.
+          My mission is is to keep your skin healthy, youthful and glowing.
+        </p>
+        <h2>Services include</h2>
         <ul>
-          <li>Lorem ipsum dolor sit amet incididunt adipisicing</li>
-          <li>Lorem ipsum dolor sit amet incididunt adipisicing</li>
-          <li>Lorem ipsum dolor sit amet incididunt adipisicing</li>
-          <li>Lorem ipsum dolor sit amet incididunt adipisicing</li>
+          <li>Anti-Aging Facial</li>
+          <li>Microdermabrasion</li>
+          <li>Extractions</li>
+          <li>Mask Treatment</li>
+        </ul>
+        <h2>Great for those who:</h2>
+        <ul>
+          <li>Want to look and feel younger</li>
+          <li>Want to regain confidence</li>
+          <li>Have a special occasion like a wedding or party</li>
+          <li>Maintenance</li>
         </ul>
       </AboutWrapper>
     </Layout>

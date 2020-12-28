@@ -98,7 +98,7 @@ const Header = ({ siteTitle }) => {
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/" className="btn btn-sm btn-secondary text-light">
+          <Link to="/contact" className="btn btn-sm btn-secondary text-light">
             Contact
           </Link>
         </li>

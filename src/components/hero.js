@@ -44,7 +44,7 @@ export const HeroContainer = styled(BackgroundImage)`
     }
   }
   @media ${device.laptop} {
-    height: 65vh;
+    height: 75vh;
     h1 {
       font-size: 3rem;
     }

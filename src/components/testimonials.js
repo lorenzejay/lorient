@@ -29,6 +29,8 @@ export const Testimonial = styled.section`
     }
   }
   @media ${device.laptop} {
+    height: 50vh;
+    padding: 2%;
     flex-direction: row;
     justify-content: space-between;
     .testimonial-title {
@@ -127,6 +129,7 @@ const Testimonials = () => {
             <img
               className="testimonial-client-image"
               src={data.facial2.childImageSharp.fluid.src}
+              alt="testimonial-autor"
             />
             <h3>Name of the customer</h3>
             <h4>Customer</h4>
@@ -138,12 +141,14 @@ const Testimonials = () => {
             <img
               className="testimonial-quote-image"
               src={data.facial.childImageSharp.fluid.src}
+              alt="quote"
             />
           </div>
           <div>
             <img
               className="testimonial-client-image"
               src={data.facial2.childImageSharp.fluid.src}
+              alt="testimonial-autor"
             />
             <h3>Name of the customer</h3>
             <h4>Customer</h4>
@@ -155,6 +160,26 @@ const Testimonials = () => {
             <img
               className="testimonial-quote-image"
               src={data.facial.childImageSharp.fluid.src}
+              alt="quote"
+            />
+          </div>
+          <div>
+            <img
+              className="testimonial-client-image"
+              src={data.facial2.childImageSharp.fluid.src}
+              alt="testimonial-autor"
+            />
+            <h3>Name of the customer</h3>
+            <h4>Customer</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </p>
+            <img
+              className="testimonial-quote-image"
+              src={data.facial.childImageSharp.fluid.src}
+              alt="quote"
             />
           </div>
         </SliderStyled>
