@@ -23,6 +23,9 @@ export const PricingSection = styled.section`
     .pricing-cards-container {
       flex-direction: row;
     }
+    .pricing-title {
+      font-size: 2.2rem;
+    }
   }
 `
 export const PricingCards = styled.div`
@@ -119,7 +122,7 @@ const Pricing = () => {
               <li>Chemical Peel</li>
               <li>Gua-sha Massage</li>
               <li>Facial Massage</li>
-              <li>Signature Cooling Ice Globe</li>
+              <li>Cooling Ice Globe</li>
             </ul>
           </div>
         </PricingCards>

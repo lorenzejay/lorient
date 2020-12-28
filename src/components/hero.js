@@ -18,7 +18,8 @@ export const HeroContainer = styled(BackgroundImage)`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-size: contain;
+    /* background-size: cover;
+    background-position: center; */
     text-align: center;
 
     padding: 5%;
@@ -44,11 +45,16 @@ export const HeroContainer = styled(BackgroundImage)`
     }
   }
   @media ${device.laptop} {
-    height: 75vh;
+    height: 72vh;
+    background-size: contain;
+    background-repeat: no-repeat;
     h1 {
       font-size: 3rem;
+      letter-spacing: 3px;
     }
-    font-size: 2.2rem;
+    h4 {
+      font-size: 2rem;
+    }
   }
 `
 

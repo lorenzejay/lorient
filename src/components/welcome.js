@@ -51,8 +51,8 @@ export const WelcomeContainer = styled.section`
         font-size: 4rem;
       }
       p {
-        width: 75%;
-        font-size: 1.1rem;
+        width: 50%;
+        font-size: 1.4rem;
       }
     }
   }

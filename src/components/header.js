@@ -67,6 +67,7 @@ export const Nav = styled.nav`
       li {
         a {
           font-size: 1.2rem;
+          letter-spacing: 3px;
         }
       }
     }

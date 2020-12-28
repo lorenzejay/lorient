@@ -29,7 +29,7 @@ export const Testimonial = styled.section`
     }
   }
   @media ${device.laptop} {
-    height: 50vh;
+    height: 65vh;
     padding: 2%;
     flex-direction: row;
     justify-content: space-between;
@@ -73,6 +73,14 @@ export const SliderStyled = styled(Slider)`
   }
   @media ${device.laptop} {
     width: 50%;
+
+    .testimonial-client-image {
+      width: 75px;
+      height: 75px;
+      margin: 3vh auto;
+      object-fit: cover;
+      border-radius: 50%;
+    }
   }
 `
 
