@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { device, primary } from "../styles/globalstyles"
-
+import { device, primary, secondary } from "../styles/globalstyles"
+import { graphql, useStaticQuery } from "gatsby"
 export const FeaturedGrid = styled.section`
   width: 100%;
 
@@ -56,7 +56,7 @@ export const FeaturedCard = styled.div`
   margin-top: 10vh;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: 0;
   flex-direction: column;
   padding: 10%;
   h3 {
@@ -64,13 +64,17 @@ export const FeaturedCard = styled.div`
   }
   hr {
     width: 50%;
+    margin: 15px;
   }
   &:hover {
     background-color: #ffd5c8;
   }
   @media ${device.mobileS} {
     background-color: ${props => (props.id % 2 === 0 ? "#f9a392" : "#231F22")};
-
+    img {
+      width: 50px;
+      margin-bottom: 3vh;
+    }
     h3,
     p {
       color: ${props => (props.id % 2 === 0 ? "#333" : "whitesmoke")};
@@ -97,6 +101,39 @@ export const FeaturedCard = styled.div`
 `
 
 const Features = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      facial1: file(relativePath: { eq: "facial6.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300, quality: 40) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      facial2: file(relativePath: { eq: "facial6.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300, quality: 40) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      facial3: file(relativePath: { eq: "cream.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300, quality: 40) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      facial4: file(relativePath: { eq: "facemask.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300, quality: 40) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <FeaturedGrid>
       <div className="featured-head">
@@ -108,7 +145,8 @@ const Features = () => {
 
       <div className="featured-card-container">
         <FeaturedCard contrast={false} id={1}>
-          <h3>Facial</h3>
+          <img src={data.facial3.childImageSharp.fluid.src} />
+          <h3>Double-Cleansing</h3>
           <hr />
           <p>
             Provides innovative bodywork and geared toward the needs of
@@ -116,17 +154,20 @@ const Features = () => {
           </p>
         </FeaturedCard>
         <FeaturedCard contrast={true} id={2}>
-          <h3>Back Treatment</h3>
+          <img src={data.facial3.childImageSharp.fluid.src} />
+          <h3>Exfoliation</h3>
           <hr />
           <p>Lorem djassd djaskdja eqwio dj jeq dsj qejwq dasjkd dhsaj</p>
         </FeaturedCard>
         <FeaturedCard contrast={true} id={3}>
-          <h3>Hand Treatment</h3>
+          <img src={data.facial3.childImageSharp.fluid.src} />
+          <h3>Extractions</h3>
           <hr />
           <p>Lorem djassd djaskdja eqwio dj jeq dsj qejwq dasjkd dhsaj</p>
         </FeaturedCard>
         <FeaturedCard contrast={false} id={4}>
-          <h3>Eyebrows</h3>
+          <img src={data.facial3.childImageSharp.fluid.src} />
+          <h3>Hand Treament</h3>
           <hr />
           <p>Lorem djassd djaskdja eqwio dj jeq dsj qejwq dasjkd dhsaj</p>
         </FeaturedCard>

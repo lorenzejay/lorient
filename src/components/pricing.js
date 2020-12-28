@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { device } from "../styles/globalstyles"
+import { device, secondary } from "../styles/globalstyles"
 
 export const PricingSection = styled.section`
   margin-bottom: 5vh;
@@ -39,10 +39,13 @@ export const PricingCards = styled.div`
       gap: 2vh;
       h3 {
         font-size: 1.8rem;
+        color: ${secondary};
       }
       h3,
       p {
         text-transform: uppercase;
+      }
+      p {
         color: whitesmoke;
       }
     }
@@ -76,40 +79,40 @@ const Pricing = () => {
       <div className="pricing-cards-container">
         <PricingCards>
           <div className="card-title">
-            <h3>Service 1</h3>
-            <p>From $50</p>
+            <h3>Gold</h3>
+            <p>From $99</p>
           </div>
           <div className="card-services">
             <ul>
-              <li>Comes with 1</li>
-              <li>Comes with 2</li>
-              <li>Comes with 3</li>
+              <li>Double Cleaning Wash</li>
+              <li>Basic Extraction</li>
+              <li>Basic Masic</li>
             </ul>
           </div>
         </PricingCards>
         <PricingCards>
           <div className="card-title">
-            <h3>Service 2</h3>
-            <p>From $50</p>
+            <h3>Platinum</h3>
+            <p>From $150</p>
           </div>
           <div className="card-services">
             <ul>
-              <li>Comes with 1</li>
-              <li>Comes with 2</li>
-              <li>Comes with 3</li>
+              <li>Glowing Mask</li>
+              <li>Exfoliation</li>
+              <li>Soothing Protective Balm</li>
             </ul>
           </div>
         </PricingCards>
         <PricingCards>
           <div className="card-title">
-            <h3>Service 3</h3>
-            <p>From $50</p>
+            <h3>Diamond</h3>
+            <p>From $250</p>
           </div>
           <div className="card-services">
             <ul>
-              <li>Comes with 1</li>
-              <li>Comes with 2</li>
-              <li>Comes with 3</li>
+              <li>Gua-sha Massage</li>
+              <li>Facial Massage</li>
+              <li>Signature Cooling Ice Globe</li>
             </ul>
           </div>
         </PricingCards>

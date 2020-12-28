@@ -39,7 +39,7 @@ const IndexPage = () => {
       <Hero
         image={data.facial.childImageSharp.fluid}
         bigText="Lorient"
-        smallText="Become revitalized, make heads turn, and look younger."
+        smallText="Keeping your skin healthy, youthful and glowing."
         buttonLink="/about"
         buttonText="Learn More"
       />

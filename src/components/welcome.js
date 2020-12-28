@@ -82,6 +82,16 @@ export const HeroContainer = styled(BackgroundImage)`
     h2 {
       text-transform: uppercase;
     }
+    p {
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+    ul {
+      width: 100%;
+      li {
+        width: 100%;
+      }
+    }
   }
   @media ${device.laptop} {
     width: 50%;
@@ -115,14 +125,23 @@ const Welcome = () => {
         <img src={data.facial.childImageSharp.fluid.src} />
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum. Sed ut perspiciatis unde omnis iste natus error sit
-          voluptatem accusantium doloremque. Consectetur adipisicing elit, sed
-          do eiusmod tempor incididunt ut labore.
+          L'ORIENT Skin Care specializes in facial skin care treatmenet. We
+          target your specific concerns and issues of your skin. We tailor every
+          facial for your specific needs and leave your skin glowing and looking
+          its best.
         </p>
+        {/* <ol>
+          <li>Double-Cleansing</li>
+          <li>Exfoliation</li>
+          <li>Extractions</li>
+          <li>Cooling Mask Treatment</li>
+        </ol>
+        <p>Add ons also include:</p>
+        <ol>
+          <li>Facial Massage</li>
+          <li>Gua-Sha Massage</li>
+          <li>Signature Cooling Ice Globes</li>
+        </ol> */}
         <Button color="#FFB1A4">Read More</Button>
       </div>
     </WelcomeContainer>
