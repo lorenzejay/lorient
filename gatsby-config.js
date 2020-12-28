@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Lorient`,
-    description: `Feel Revitalize, young and make heads turn back.`,
-    author: `Uplift Digital Solutions`,
+    description: `Feel Revitalized, young and make heads turn back.`,
+    author: `Lucy Hernandez`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,

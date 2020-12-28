@@ -88,8 +88,8 @@ const Pricing = () => {
               <li>Double Cleaning Wash</li>
               <li>Basic Extraction</li>
               <li>Basic Mask Peel</li>
-              <li>Light Treatment</li>
-              <li></li>
+              <li>UV Light Treatment</li>
+              <li>Face and Arm Lotion</li>
             </ul>
           </div>
         </PricingCards>

@@ -103,14 +103,14 @@ export const FeaturedCard = styled.div`
 const Features = () => {
   const data = useStaticQuery(graphql`
     query {
-      facial1: file(relativePath: { eq: "facial6.jpg" }) {
+      facial1: file(relativePath: { eq: "woman.png" }) {
         childImageSharp {
           fluid(maxWidth: 300, quality: 40) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      facial2: file(relativePath: { eq: "facial6.jpg" }) {
+      facial2: file(relativePath: { eq: "bamboo.png" }) {
         childImageSharp {
           fluid(maxWidth: 300, quality: 40) {
             ...GatsbyImageSharpFluid_withWebp
@@ -124,7 +124,7 @@ const Features = () => {
           }
         }
       }
-      facial4: file(relativePath: { eq: "facemask.png" }) {
+      facial4: file(relativePath: { eq: "towels.png" }) {
         childImageSharp {
           fluid(maxWidth: 300, quality: 40) {
             ...GatsbyImageSharpFluid_withWebp
@@ -145,7 +145,10 @@ const Features = () => {
 
       <div className="featured-card-container">
         <FeaturedCard contrast={false} id={1}>
-          <img src={data.facial3.childImageSharp.fluid.src} />
+          <img
+            src={data.facial1.childImageSharp.fluid.src}
+            alt="facial-icons"
+          />
           <h3>Double-Cleansing</h3>
           <hr />
           <p>
@@ -154,19 +157,28 @@ const Features = () => {
           </p>
         </FeaturedCard>
         <FeaturedCard contrast={true} id={2}>
-          <img src={data.facial3.childImageSharp.fluid.src} />
+          <img
+            src={data.facial2.childImageSharp.fluid.src}
+            alt="facial-icons"
+          />
           <h3>Exfoliation</h3>
           <hr />
           <p>Lorem djassd djaskdja eqwio dj jeq dsj qejwq dasjkd dhsaj</p>
         </FeaturedCard>
         <FeaturedCard contrast={true} id={3}>
-          <img src={data.facial3.childImageSharp.fluid.src} />
+          <img
+            src={data.facial3.childImageSharp.fluid.src}
+            alt="facial-icons"
+          />
           <h3>Extractions</h3>
           <hr />
           <p>Lorem djassd djaskdja eqwio dj jeq dsj qejwq dasjkd dhsaj</p>
         </FeaturedCard>
         <FeaturedCard contrast={false} id={4}>
-          <img src={data.facial3.childImageSharp.fluid.src} />
+          <img
+            src={data.facial4.childImageSharp.fluid.src}
+            alt="facial-icons"
+          />
           <h3>Hand Treament</h3>
           <hr />
           <p>Lorem djassd djaskdja eqwio dj jeq dsj qejwq dasjkd dhsaj</p>
