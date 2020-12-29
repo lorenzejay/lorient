@@ -39,6 +39,7 @@ export const WelcomeContainer = styled.section`
         margin-top: 5vh;
         font-size: 0.95rem;
         text-align: center;
+        width: 85%;
       }
     }
   }

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "slug": "/exfoliation",
+    "title": "Exfoliation",
+    "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
+    "benefits": ["benefit1", "benefit2", "benefit3", "benefit4", "benefit5"]
+  },
+  {
+    "id": 2,
+    "slug": "/service2",
+    "title": "Service 2",
+    "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
+    "benefits": ["benefit1", "benefit2", "benefit3", "benefit4", "benefit5"]
+  },
+  {
+    "id": 3,
+    "slug": "/service3",
+    "title": "Service 1",
+    "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
+    "benefits": ["benefit1", "benefit2", "benefit3", "benefit4", "benefit5"]
+  },
+  {
+    "id": 4,
+    "slug": "/service4",
+    "title": "Service 1",
+    "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
+    "benefits": ["benefit1", "benefit2", "benefit3", "benefit4", "benefit5"]
+  }
+]

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { device, primary, secondary } from "../styles/globalstyles"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 export const FeaturedGrid = styled.section`
   width: 100%;
 
@@ -181,19 +181,21 @@ const Features = () => {
         alt="facial being done"
       />
       <div className="featured-card-container">
-        <FeaturedCard contrast={false} id={1}>
-          <img
-            src={data.facial1.childImageSharp.fluid.src}
-            alt="facial-icons"
-          />
-          <h3>Double-Cleansing</h3>
-          <hr />
-          <p>
-            Uses a cleansing oil to first remove your makeup and sunscreen. This
-            step is clears the way for your regular cleanser to cleanse your
-            skin.
-          </p>
-        </FeaturedCard>
+        <Link to="/service1">
+          <FeaturedCard contrast={false} id={1}>
+            <img
+              src={data.facial1.childImageSharp.fluid.src}
+              alt="facial-icons"
+            />
+            <h3>Double-Cleansing</h3>
+            <hr />
+            <p>
+              Uses a cleansing oil to first remove your makeup and sunscreen.
+              This step is clears the way for your regular cleanser to cleanse
+              your skin.
+            </p>
+          </FeaturedCard>
+        </Link>
         <FeaturedCard contrast={true} id={2}>
           <img
             src={data.facial2.childImageSharp.fluid.src}
