@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Button from "../components/button"
 import Hero from "../components/hero"
 import Layout from "../components/layout"
-import { device, secondary } from "../styles/globalstyles"
+import { device, primary, secondary } from "../styles/globalstyles"
 
 export const ServiceWrapper = styled.section`
   padding: 5%;
@@ -38,7 +38,7 @@ const Service = context => {
   `)
 
   const { pageContext } = context
-  const { id, title, description, benefits } = pageContext
+  const { id, title, description, benefits, blogSlug } = pageContext
   return (
     <Layout>
       <Hero image={data.facial.childImageSharp.fluid} bigText={title} />
@@ -47,12 +47,17 @@ const Service = context => {
         <p>{description}</p>
         <ul>
           {benefits.map((benefit, i) => {
-            return <li key={i}>{benefit}</li>
+            return <li key={benefit.id}>{benefit}</li>
           })}
         </ul>
-        <Button color={secondary}>
-          <Link to="/contact">Book Now</Link>
-        </Button>
+        <Link to="/contact">
+          <Button color={secondary}>Book Now</Button>
+        </Link>
+        {blogSlug && (
+          <Link to={blogSlug}>
+            <Button color={primary}>Learn More</Button>
+          </Link>
+        )}
       </ServiceWrapper>
     </Layout>
   )

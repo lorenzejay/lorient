@@ -5,7 +5,7 @@ const ButtonStyled = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 5vh 0;
+  margin: 5vh 15px;
   background-color: ${props => props.color};
   padding: 8px 40px;
   border-radius: 3px;

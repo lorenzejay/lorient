@@ -2,10 +2,15 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
+import Hero from "../components/hero"
 
 export const BTemplateWrapper = styled.section`
   margin-top: 12vh;
   padding: 5%;
+  h1,
+  h2 {
+    font-weight: 400;
+  }
 `
 
 export default function Template({
@@ -15,10 +20,12 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
+      <Hero image={frontmatter.featuredImage.childImageSharp.fluid.src} />
       <BTemplateWrapper className="blog-post-container">
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.date}</h2>
+          <p>{frontmatter.author}</p>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -36,6 +43,14 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        author
+        featuredImage {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
       }
     }
   }

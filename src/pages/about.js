@@ -51,7 +51,7 @@ const About = () => {
     query {
       facial: file(relativePath: { eq: "facial7.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 90) {
+          fluid(maxWidth: 1920, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

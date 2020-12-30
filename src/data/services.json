@@ -5,6 +5,7 @@
     "title": "Brightening Facial",
     "contrast": false,
     "icon": "../images/woman.png",
+    "blogSlug": "",
     "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
     "benefits": [
       "Gets right at the source. of unwanted discoloration.",
@@ -20,7 +21,8 @@
     "slug": "/botanical-smoothing-facial",
     "title": "Botanical Smoothing Facial",
     "contrast": true,
-    "icon": "../images/cream.png",
+    "icon": "../images/bamboo.png",
+    "blogSlug": "",
     "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
     "benefits": [
       "Instantly subdues inflammation, visible redness and any reactions.",
@@ -33,7 +35,8 @@
     "slug": "/classical-nourishing-facial",
     "title": "Classical Nourishing Facial",
     "contrast": true,
-    "icon": "../images/bamboo.png",
+    "icon": "../images/cream.png",
+    "blogSlug": "",
     "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
     "benefits": [
       "Relaxing and Soothing.",
@@ -45,10 +48,11 @@
   },
   {
     "id": 4,
-    "slug": "/gua-sha-massage",
-    "title": "Service 1",
+    "slug": "/facial-ice-globes",
+    "title": "Cooling Globes",
     "contrast": false,
     "icon": "../images/towels.png",
+    "blogSlug": "/facial-ice-globes",
     "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
     "benefits": [
       "Stimulates microcirculation of soft tissue.",

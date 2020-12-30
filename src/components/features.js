@@ -148,7 +148,7 @@ const Features = () => {
       }
       facialMain: file(relativePath: { eq: "facial9.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 19020, quality: 60) {
+          fluid(maxWidth: 19020, quality: 50) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

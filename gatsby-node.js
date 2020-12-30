@@ -11,6 +11,7 @@ exports.createPages = async ({ actions, graphql }) => {
         title: service.title,
         description: service.shortDescription,
         benefits: service.benefits,
+        blogSlug: service.blogSlug,
       },
     })
   })
