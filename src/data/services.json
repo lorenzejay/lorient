@@ -1,29 +1,54 @@
 [
   {
     "id": 1,
-    "slug": "/exfoliation",
-    "title": "Exfoliation",
+    "slug": "/brightening-facial",
+    "title": "Brightening Facial",
+    "contrast": false,
+    "icon": "../images/woman.png",
     "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
-    "benefits": ["benefit1", "benefit2", "benefit3", "benefit4", "benefit5"]
+    "benefits": [
+      "Gets right at the source. of unwanted discoloration.",
+      "Dissolving Rogue pigment cells on the spot.",
+      "Clears aging dead surface cells.",
+      "Increases cellular microcirculation.",
+      "Pulls powerful skin brightening antioxidants.",
+      "Best if done in 4 concecutive results."
+    ]
   },
   {
     "id": 2,
-    "slug": "/service2",
-    "title": "Service 2",
+    "slug": "/botanical-smoothing-facial",
+    "title": "Botanical Smoothing Facial",
+    "contrast": true,
+    "icon": "../images/cream.png",
     "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
-    "benefits": ["benefit1", "benefit2", "benefit3", "benefit4", "benefit5"]
+    "benefits": [
+      "Instantly subdues inflammation, visible redness and any reactions.",
+      "Removes dry, flaming skin, and surface irritants.",
+      "Restorative, Relaxing, and Soothing."
+    ]
   },
   {
     "id": 3,
-    "slug": "/service3",
-    "title": "Service 1",
+    "slug": "/classical-nourishing-facial",
+    "title": "Classical Nourishing Facial",
+    "contrast": true,
+    "icon": "../images/bamboo.png",
     "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
-    "benefits": ["benefit1", "benefit2", "benefit3", "benefit4", "benefit5"]
+    "benefits": [
+      "Relaxing and Soothing.",
+      "Gentle deep cleansing lifts away dry and flaking dead skin.",
+      "Comes with Creamy Soothing Mask.",
+      "Helps skin soak up rejuvinating hydration.",
+      "Leave looking fresh and feeling radiant."
+    ]
   },
   {
     "id": 4,
     "slug": "/service4",
     "title": "Service 1",
+    "contrast": false,
+    "icon": "../images/towels.png",
     "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
     "benefits": ["benefit1", "benefit2", "benefit3", "benefit4", "benefit5"]
   }

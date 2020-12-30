@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { device, primary, secondary } from "../styles/globalstyles"
+import { device, primary } from "../styles/globalstyles"
 import { graphql, Link, useStaticQuery } from "gatsby"
 export const FeaturedGrid = styled.section`
   width: 100%;
@@ -129,6 +129,23 @@ export const FeaturedCard = styled.div`
 const Features = () => {
   const data = useStaticQuery(graphql`
     query {
+      allServicesJson {
+        nodes {
+          id
+          title
+          contrast
+          slug
+          shortDescription
+          benefits
+          icon {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
+        }
+      }
       facialMain: file(relativePath: { eq: "facial9.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 19020, quality: 60) {
@@ -166,7 +183,7 @@ const Features = () => {
       }
     }
   `)
-
+  const services = data.allServicesJson.nodes
   return (
     <FeaturedGrid>
       <div className="featured-head">
@@ -181,7 +198,23 @@ const Features = () => {
         alt="facial being done"
       />
       <div className="featured-card-container">
-        <Link to="/service1">
+        {services.map((service, i) => {
+          console.log(service)
+          return (
+            <Link to={service.slug} key={service.id}>
+              <FeaturedCard contrast={service.contrast} id={service.id}>
+                <img
+                  src={service.icon.childImageSharp.fluid.src}
+                  alt="facial-icons"
+                />
+                <h3>{service.title}</h3>
+                <hr />
+                <p>{service.shortDescription}</p>
+              </FeaturedCard>
+            </Link>
+          )
+        })}
+        {/* <Link to="/brightening-facial">
           <FeaturedCard contrast={false} id={1}>
             <img
               src={data.facial1.childImageSharp.fluid.src}
@@ -196,31 +229,35 @@ const Features = () => {
             </p>
           </FeaturedCard>
         </Link>
-        <FeaturedCard contrast={true} id={2}>
-          <img
-            src={data.facial2.childImageSharp.fluid.src}
-            alt="facial-icons"
-          />
-          <h3>Exfoliation</h3>
-          <hr />
-          <p>
-            Help prevent clogged pores, resulting in fewer breakouts. Long-term
-            exfoliating can increase collagen production, key to glowing,
-            vibrant skin.
-          </p>
-        </FeaturedCard>
-        <FeaturedCard contrast={true} id={3}>
-          <img
-            src={data.facial3.childImageSharp.fluid.src}
-            alt="facial-icons"
-          />
-          <h3>Extractions</h3>
-          <hr />
-          <p>
-            Clearing a clogged or compacted pore by manual or mechanical means.
-            Extractions are often performed as part of a facial.
-          </p>
-        </FeaturedCard>
+        <Link to="/botanical-smoothing-facial">
+          <FeaturedCard contrast={true} id={2}>
+            <img
+              src={data.facial2.childImageSharp.fluid.src}
+              alt="facial-icons"
+            />
+            <h3>Exfoliation</h3>
+            <hr />
+            <p>
+              Help prevent clogged pores, resulting in fewer breakouts.
+              Long-term exfoliating can increase collagen production, key to
+              glowing, vibrant skin.
+            </p>
+          </FeaturedCard>
+        </Link>
+        <Link to="/classical-nourishing-facial">
+          <FeaturedCard contrast={true} id={3}>
+            <img
+              src={data.facial3.childImageSharp.fluid.src}
+              alt="facial-icons"
+            />
+            <h3>Classical Noursing Facial</h3>
+            <hr />
+            <p>
+              Clearing a clogged or compacted pore by manual or mechanical
+              means. Extractions are often performed as part of a facial.
+            </p>
+          </FeaturedCard>
+        </Link>
         <FeaturedCard contrast={false} id={4}>
           <img
             src={data.facial4.childImageSharp.fluid.src}
@@ -232,7 +269,7 @@ const Features = () => {
             Massages get oxygen-rich blood flowing into areas that are sore or
             stiff. Increases delivery of nutrients to organs and ligaments.
           </p>
-        </FeaturedCard>
+        </FeaturedCard> */}
       </div>
     </FeaturedGrid>
   )
