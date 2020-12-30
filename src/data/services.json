@@ -45,11 +45,15 @@
   },
   {
     "id": 4,
-    "slug": "/service4",
+    "slug": "/gua-sha-massage",
     "title": "Service 1",
     "contrast": false,
     "icon": "../images/towels.png",
     "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
-    "benefits": ["benefit1", "benefit2", "benefit3", "benefit4", "benefit5"]
+    "benefits": [
+      "Stimulates microcirculation of soft tissue.",
+      "Increases bloodflow.",
+      "Imporove movement in the joints."
+    ]
   }
 ]

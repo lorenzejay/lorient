@@ -214,62 +214,6 @@ const Features = () => {
             </Link>
           )
         })}
-        {/* <Link to="/brightening-facial">
-          <FeaturedCard contrast={false} id={1}>
-            <img
-              src={data.facial1.childImageSharp.fluid.src}
-              alt="facial-icons"
-            />
-            <h3>Double-Cleansing</h3>
-            <hr />
-            <p>
-              Uses a cleansing oil to first remove your makeup and sunscreen.
-              This step is clears the way for your regular cleanser to cleanse
-              your skin.
-            </p>
-          </FeaturedCard>
-        </Link>
-        <Link to="/botanical-smoothing-facial">
-          <FeaturedCard contrast={true} id={2}>
-            <img
-              src={data.facial2.childImageSharp.fluid.src}
-              alt="facial-icons"
-            />
-            <h3>Exfoliation</h3>
-            <hr />
-            <p>
-              Help prevent clogged pores, resulting in fewer breakouts.
-              Long-term exfoliating can increase collagen production, key to
-              glowing, vibrant skin.
-            </p>
-          </FeaturedCard>
-        </Link>
-        <Link to="/classical-nourishing-facial">
-          <FeaturedCard contrast={true} id={3}>
-            <img
-              src={data.facial3.childImageSharp.fluid.src}
-              alt="facial-icons"
-            />
-            <h3>Classical Noursing Facial</h3>
-            <hr />
-            <p>
-              Clearing a clogged or compacted pore by manual or mechanical
-              means. Extractions are often performed as part of a facial.
-            </p>
-          </FeaturedCard>
-        </Link>
-        <FeaturedCard contrast={false} id={4}>
-          <img
-            src={data.facial4.childImageSharp.fluid.src}
-            alt="facial-icons"
-          />
-          <h3>Hand Treament</h3>
-          <hr />
-          <p>
-            Massages get oxygen-rich blood flowing into areas that are sore or
-            stiff. Increases delivery of nutrients to organs and ligaments.
-          </p>
-        </FeaturedCard> */}
       </div>
     </FeaturedGrid>
   )
