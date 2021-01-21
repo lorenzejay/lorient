@@ -45,7 +45,7 @@ export const WelcomeContainer = styled.section`
   }
   @media ${device.laptop} {
     img {
-      width: 250px;
+      width: 150px;
     }
     .welcome-text {
       h1 {
@@ -100,7 +100,7 @@ export const HeroContainer = styled(BackgroundImage)`
 const Welcome = () => {
   const data = useStaticQuery(graphql`
     query {
-      facial: file(relativePath: { eq: "lorientlogo.png" }) {
+      facial: file(relativePath: { eq: "logopng2.png" }) {
         childImageSharp {
           fluid {
             src

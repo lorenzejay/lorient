@@ -87,6 +87,22 @@ export const SliderStyled = styled(Slider)`
 const Testimonials = () => {
   const data = useStaticQuery(graphql`
     query {
+      allTestimonialsJson {
+        edges {
+          node {
+            id
+            name
+            description
+            imageSrc {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+          }
+        }
+      }
       facial: file(relativePath: { eq: "quote.png" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 90) {
@@ -111,6 +127,7 @@ const Testimonials = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   }
+  console.log(data.allTestimonialsJson)
   return (
     <Testimonial>
       <Helmet>
@@ -133,63 +150,26 @@ const Testimonials = () => {
       </div>
       <>
         <SliderStyled {...settings}>
-          <div>
-            <img
-              className="testimonial-client-image"
-              src={data.facial2.childImageSharp.fluid.src}
-              alt="testimonial-autor"
-            />
-            <h3>Name of the customer</h3>
-            <h4>Customer</h4>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
-            <img
-              className="testimonial-quote-image"
-              src={data.facial.childImageSharp.fluid.src}
-              alt="quote"
-            />
-          </div>
-          <div>
-            <img
-              className="testimonial-client-image"
-              src={data.facial2.childImageSharp.fluid.src}
-              alt="testimonial-autor"
-            />
-            <h3>Name of the customer</h3>
-            <h4>Customer</h4>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
-            <img
-              className="testimonial-quote-image"
-              src={data.facial.childImageSharp.fluid.src}
-              alt="quote"
-            />
-          </div>
-          <div>
-            <img
-              className="testimonial-client-image"
-              src={data.facial2.childImageSharp.fluid.src}
-              alt="testimonial-autor"
-            />
-            <h3>Name of the customer</h3>
-            <h4>Customer</h4>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
-            <img
-              className="testimonial-quote-image"
-              src={data.facial.childImageSharp.fluid.src}
-              alt="quote"
-            />
-          </div>
+          {data.allTestimonialsJson.edges.map(({ node }) => {
+            return (
+              <div>
+                <img
+                  className="testimonial-client-image"
+                  src={node.imageSrc.childImageSharp.fluid.src}
+                  alt="testimonial-autor"
+                />
+                <h3>{node.name}</h3>
+                {/* <h4>Customer</h4> */}
+                <p>{node.description}</p>
+                <img
+                  className="testimonial-quote-image"
+                  src={data.facial.childImageSharp.fluid.src}
+                  alt={"testimonial author"}
+                  title={node.title}
+                />
+              </div>
+            )
+          })}
         </SliderStyled>
       </>
     </Testimonial>

@@ -35,7 +35,10 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="L'ORIENT | Skin Care Specialist" />
+      <SEO
+        title="Los Angeles Skin Care Specialist and Licensed Esthetician."
+        description="Licenced Esthetician specializing in keeping skin youthful, glowing and healthy. Pimple Extraction, healing facial mask, and one of the best facials in Los Angeles. "
+      />
       <Hero
         image={data.facial.childImageSharp.fluid}
         bigText="L'orient"
@@ -43,13 +46,6 @@ const IndexPage = () => {
         buttonLink="/about"
         buttonText="Learn More"
       />
-      {/* <h1>Become Lorient</h1>
-        <h4>Feel Revitalize, make heads turn back, and live younger.</h4>
-        <Button color={primary}>
-          <Link to="/">Learn More</Link>
-        </Button>
-      </Hero> */}
-
       <Welcome />
       <Features />
       <Pricing />

@@ -77,7 +77,7 @@ export const Nav = styled.nav`
 const Header = ({ siteTitle }) => {
   const data = useStaticQuery(graphql`
     query {
-      facial: file(relativePath: { eq: "lorientlogo.png" }) {
+      facial: file(relativePath: { eq: "logopng2.png" }) {
         childImageSharp {
           fluid(maxWidth: 500, quality: 50) {
             ...GatsbyImageSharpFluid_withWebp

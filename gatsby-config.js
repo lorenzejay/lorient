@@ -19,9 +19,10 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/data/`,
+        path: `${__dirname}/src/data/`,
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -41,7 +42,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/lorientlogo.png`, // This path is relative to the root of the site.
+        icon: `src/images/logopng1.png`, // This path is relative to the root of the site.
       },
     },
     {

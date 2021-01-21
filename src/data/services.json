@@ -6,7 +6,7 @@
     "contrast": false,
     "icon": "../images/woman.png",
     "blogSlug": "",
-    "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
+    "shortDescription": "Great solution if you are developing dark patches or spots in your skin. This is known as hyperpigmentation.",
     "benefits": [
       "Gets right at the source. of unwanted discoloration.",
       "Dissolving Rogue pigment cells on the spot.",
@@ -19,11 +19,11 @@
   {
     "id": 2,
     "slug": "/botanical-smoothing-facial",
-    "title": "Botanical Smoothing Facial",
+    "title": "Smoothing Facial",
     "contrast": true,
     "icon": "../images/bamboo.png",
     "blogSlug": "",
-    "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
+    "shortDescription": "Great if you have sensitive skin, redness on face. Using a restorative moisture mask you will leave feeling comfortable rather than irritated.",
     "benefits": [
       "Instantly subdues inflammation, visible redness and any reactions.",
       "Removes dry, flaming skin, and surface irritants.",
@@ -33,11 +33,11 @@
   {
     "id": 3,
     "slug": "/classical-nourishing-facial",
-    "title": "Classical Nourishing Facial",
+    "title": "Nourishing Facial",
     "contrast": true,
     "icon": "../images/cream.png",
     "blogSlug": "",
-    "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
+    "shortDescription": "Gets rid of flaking dead skin. Leave looking fresh, dewy, and more radiant.",
     "benefits": [
       "Relaxing and Soothing.",
       "Gentle deep cleansing lifts away dry and flaking dead skin.",
@@ -53,11 +53,12 @@
     "contrast": false,
     "icon": "../images/towels.png",
     "blogSlug": "/facial-ice-globes",
-    "shortDescription": "This is what is included in this specific services. You will be getting this, this and this wil make this look better.",
+    "shortDescription": "Tightens and plumps your skin. Great for closing pores, reducing previous scarring and provides natural headache and sinus relief.",
     "benefits": [
-      "Stimulates microcirculation of soft tissue.",
-      "Increases bloodflow.",
-      "Imporove movement in the joints."
+      "Tightens and plumps the skin.",
+      "Enhances blood circulation.",
+      "Brightens skin complextion.",
+      "Reduces Acne scarring. "
     ]
   }
 ]
